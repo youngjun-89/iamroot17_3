@@ -1,0 +1,44 @@
+#사전 준비
+1)VMware 설치 
+2)Ubuntu 18.04 x64 Desktop iso 파일 다운로드 후, vm 생성및 설치 
+3)Kernel module을 빌드하려면
+apt-get(Ubuntu 기준)으로 설치해야 하는 항목들이 있습니다.
+아래와 같이 설치 가능합니다.
+
+apt-get install build-essential linux-headers-$(uname -r)
+* 혹시, 해당 설치 이후에도, 빌드가 되지 않을 경우 인터넷 서치 하셔서
+필요한 것을 쉽게 검색 가능합니다.
+
+4) 커널 모듈 테스트 시, 커널 panic으로 디버깅이 필요할 수 있습니다. 
+apt-get install kdump-tools 후 재부팅 하시면, 커널 panic시에
+/var/crash/(날짜)/dmesg~ 형태로 panic시점의 커널 로그를 확인 가능합니다.
+dump를 확인하고 싶은 경우는 별도 문서로 알려드리도록 하겠습니다. (인터넷에서 찾아보셔서
+진행하셔도 좋습니다.)
+
+# 빌드 및 테스트 환경
+Ubuntu 18.04 x64 5.3.0.46 커널
+(최소 5.x 대 커널에서 테스트 하시면 좋아보입니다.
+낮은 커널의 경우, Kernel API인터페이스가 달라서
+빌드가 되지 않을 수도 있습니다.)
+
+# 빌드 방법
+make 입력.
+
+산출물
+커널 모듈:iamroot.ko 
+유저 Tool: user
+
+# 테스트 방법
+insmod iamroot.ko (모듈 로드)
+ls /dev/iamroot (device 파일 생성 확인)
+dmesg 로 커널 로그 확인(load 여부)
+./user 실행
+pid값을 ioctl로 얻어왔는지 stdout으로 확인
+rmmod iamroot
+dmesg로 커널 로그 확인(unload 여부)
+
+#활용 방법
+커널:main.c 에 구현 된 내용을 변경하셔서 원하는 ioctl 핸들링
+방법을 구현하시면 됩니다.
+유저:user.c, 이에 맞게 수정하셔서 적절한 ioctl을 호출하도록
+하시면 됩니다.
