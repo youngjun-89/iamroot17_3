@@ -22,8 +22,8 @@
 
 ## 5주차
 - 2020.09.19, 온라인, zoom (6명: 박영준, 이민제, 이환희, 박연희, 김지희, 이승환)
-- 코드로 알아보는 ARM 리눅스 커널 2판 1장, Arm Programmer's Guid for ARMv8-A 1장 ~ 5.1.3 Registers
+- 코드로 알아보는 ARM 리눅스 커널 2판 1장, Arm Programmer's Guide for ARMv8-A 1장 ~ 5.1.3 Registers
 
 ## 6주차
 - 2020.09.19, 온라인, zoom (5명: 박영준, 이민제, 이환희, 박연희, 김지희)
-- Arm Programmer's Guid for ARMv8-A 5.2 C/C++ inline assembly ~ 9.1.2 Indirect result location
+- Arm Programmer's Guide for ARMv8-A 5.2 C/C++ inline assembly ~ 9.1.2 Indirect result location
