@@ -19,3 +19,18 @@
 ## 4주차
 - 2020.09.12, 온라인, zoom (4명: 이민제, 박연희, 김지희, 이환희)
 - 리눅스 커널 내부구조 (206 ~ 247 Chapter 8, Chapter 9)
+
+## 5주차
+- 2020.09.19, 온라인, zoom (6명: 박영준, 이민제, 이환희, 박연희, 김지희, 이승환)
+- 코드로 알아보는 ARM 리눅스 커널 2판 1장, Arm Programmer's Guide for ARMv8-A 1장 ~ 5.1.3 Registers
+
+## 6주차
+- 2020.09.26, 온라인, zoom (5명: 박영준, 이민제, 이환희, 박연희, 김지희)
+- Arm Programmer's Guide for ARMv8-A 5.2 C/C++ inline assembly ~ 9.1.2 Indirect result location
+
+## 7주차
+ - 추석 
+
+## 8주차
+- 2020.10.10, 온라인, zoom (4명: 박영준, 이환희, 이민제, 김지희)
+- Arm Programmer's Guide for ARMv8-A 9.1.3 Parameters in NEON and floating-poing registers ~ 12 The Memory Management Unit
